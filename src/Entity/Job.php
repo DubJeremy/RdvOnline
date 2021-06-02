@@ -22,6 +22,11 @@ class Job
      */
     private $jobName;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=ProCategorie::class)
+     */
+    private $idProCategorie;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,6 +40,18 @@ class Job
     public function setJobName(string $jobName): self
     {
         $this->jobName = $jobName;
+
+        return $this;
+    }
+
+    public function getIdProCategorie(): ?ProCategorie
+    {
+        return $this->idProCategorie;
+    }
+
+    public function setIdProCategorie(?ProCategorie $idProCategorie): self
+    {
+        $this->idProCategorie = $idProCategorie;
 
         return $this;
     }
