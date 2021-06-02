@@ -1,3 +1,4 @@
+{% if not app.user %}
 <header>
     <nav>
         <ul>
@@ -5,8 +6,25 @@
                 <a href="{{path("app_home_index")}}">Home</a>
             </li>
             <li>
-                <a href="{{path("app_home_new")}}">Inscription</a> / <a href="#">Connexion</a>
+                <a href="{{path("app_registration_register")}}">Inscription</a> / <a href="{{path("app_security_login")}}">Connexion</a>
             </li>
         </ul>
     </nav>
 </header>
+{% else %}
+    <header>
+    <nav>
+        <ul>
+            <li>
+                <a href="{{path("app_home_index")}}">Home</a>
+            </li>
+            <li>
+                <a href="{{path("app_profil_profil")}}"><i class="far fa-user-circle"></i></a>
+            </li>
+            <li>
+                <a href="{{path("app_logout")}}">Déconnexion</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+{% endif %}
