@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RdvPro{% endblock %}
+
+{% block body %}
+
+    {% for pro in pros %}
+        <h2>{{pro.idProCategorie}}</h2>
+        <p>{{pro.idJob}}</p>
+        <p>Adresse: {{pro.adress}}</p>
+        <p>{{pro.price}}€/heure</p>
+        <p>Nom: {{pro.companyName}}</p>
+        
+    {% endfor %}
+
+
+{% endblock %}

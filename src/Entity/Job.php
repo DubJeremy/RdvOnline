@@ -27,6 +27,11 @@ class Job
      */
     private $idProCategorie;
 
+    public function __toString()
+    {
+        return $this->jobName;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

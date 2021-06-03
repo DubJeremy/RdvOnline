@@ -21,6 +21,11 @@ class ProCategorie
      * @ORM\Column(type="string", length=255)
      */
     private $nameCategorie;
+    
+    public function __toString()
+    {
+        return $this->nameCategorie;
+    }
 
     public function getId(): ?int
     {
