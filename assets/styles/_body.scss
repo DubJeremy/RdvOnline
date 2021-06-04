@@ -1,12 +1,29 @@
 .template
 {
     @include flex($dir: column);
-    margin-top: 5em;
-
+    background-image: url("../../public/images/lawyer.jpg");
+    background-size: cover;
+    height: 85vh;
+    
     h1 
     {
         margin-bottom: 0.5em;
         font-size: 4em;
         color: $purple;
+        text-shadow: 2px 2px 2px white;
+    }
+}
+#cardpro
+{
+    width: 100%;
+    @include flex;
+    margin-top: 4em;
+    margin-bottom: 4em;
+
+    div
+    {
+        width: 30%;
+        height: 7em;
+        @include flex($dir: column);
     }
 }
